@@ -56,6 +56,7 @@ class ADE20KSegmentation(SegmentationDataset):
                 img = self.transform(img)
             return img, os.path.basename(self.images[index])
         mask = Image.open(self.masks[index])
+        #print("raw mask ==============", np.array(mask))
         # synchrosized transform
         if self.mode == 'train':
             img, mask = self._sync_transform(img, mask)
@@ -67,6 +68,7 @@ class ADE20KSegmentation(SegmentationDataset):
         # general resize, normalize and to Tensor
         if self.transform is not None:
             img = self.transform(img)
+        #print("after trans mask ==============", np.array(mask))
         return img, mask, os.path.basename(self.images[index])
 
     def _mask_transform(self, mask):

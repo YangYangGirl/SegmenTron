@@ -1,0 +1,22 @@
+DATASET:
+    NAME: "mots20"
+    MEAN: [0.5, 0.5, 0.5]
+    STD: [0.5, 0.5, 0.5]
+    MODE: 'train'
+TRAIN:
+    EPOCHS: 120
+    BATCH_SIZE: 2
+    CROP_SIZE: 100
+    BASE_SIZE: 100
+    SNAPSHOT_EPOCH: 1
+#BACKBONE_PRETRAINED_PATH: "/home/yangy/yy/github/SegmenTron/pretrained/deeplabv3_plus_xception_segmentron.pth"
+TEST:
+    BATCH_SIZE: 1
+    CROP_SIZE: (1200, 400)
+SOLVER:
+    LR: 0.0001
+
+MODEL:
+    MODEL_NAME: "DeepLabV3_Plus"
+    BACKBONE: "xception65"
+    BN_EPS_FOR_ENCODER: 1e-3

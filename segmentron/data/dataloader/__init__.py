@@ -7,6 +7,7 @@ from .ade import ADE20KSegmentation
 from .pascal_voc import VOCSegmentation
 from .pascal_aug import VOCAugSegmentation
 from .sbu_shadow import SBUSegmentation
+from .mots import MOTS20Segmentation
 
 datasets = {
     'ade20k': ADE20KSegmentation,
@@ -15,6 +16,7 @@ datasets = {
     'coco': COCOSegmentation,
     'cityscape': CitySegmentation,
     'sbu': SBUSegmentation,
+    'mots20': MOTS20Segmentation,
 }
 
 

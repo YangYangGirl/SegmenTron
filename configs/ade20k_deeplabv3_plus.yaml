@@ -5,11 +5,11 @@ DATASET:
     MODE: 'val'
 TRAIN:
     EPOCHS: 120
-    BATCH_SIZE: 8
+    BATCH_SIZE: 2
     CROP_SIZE: 480
     BASE_SIZE: 520
 TEST:
-    BATCH_SIZE: 8
+    BATCH_SIZE: 2
 
 SOLVER:
     LR: 0.01

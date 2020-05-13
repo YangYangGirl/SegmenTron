@@ -61,6 +61,7 @@ class SegBaseModel(nn.Module):
 
             # resize image to current size
             cur_img = _resize_image(image, height, width)
+            print("crop_size, h, w", crop_size, h, w)
             if crop_size is not None:
                 assert crop_size[0] >= h and crop_size[1] >= w
                 crop_size_scaled = (int(math.ceil(crop_size[0] * scale)),

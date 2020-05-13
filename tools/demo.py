@@ -26,6 +26,7 @@ def demo():
     # output folder
     output_dir = os.path.join(cfg.VISUAL.OUTPUT_DIR, 'vis_result_{}_{}_{}_{}'.format(
         cfg.MODEL.MODEL_NAME, cfg.MODEL.BACKBONE, cfg.DATASET.NAME, cfg.TIME_STAMP))
+    print("output_dir", output_dir)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -38,6 +39,7 @@ def demo():
     model = get_segmentation_model().to(args.device)
     model.eval()
 
+    print("args.input_img", args.input_img)
     if os.path.isdir(args.input_img):
         img_paths = [os.path.join(args.input_img, x) for x in os.listdir(args.input_img)]
     else:
